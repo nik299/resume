@@ -1,0 +1,171 @@
+%% start of file `template.tex'.
+%% CV Template
+% Varun Sundar
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Varun}{Sundar}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Room 120, Tapti Hostel}{IIT Madras, Chennai}{India}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+91-831-069-1961}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{ee16b068@smail.iitm.ac.in}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[github]{@varun19299}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted                    % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file                                % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2016--2020}{B Tech, Electrical Engineering (5th Semester)}{Indian Institute of Technology Madras}{Chennai}{\textit{CGPA - 9.53/10}}{Description}  % arguments 3 to 6 can be left empty
+
+\section{Scholastic Achievements}
+\begin{itemize}
+\item Secured \textbf{All India Rank of 2917 }in Joint Entrance Examination (JEE) -Advanced 2016 (out of1 ,50,000+ candidates ).
+\item  Secured \textbf{All India Rank of 501} in Joint Entrance Examination (JEE) -Mains 2016 (out of 13,00,000+ candidates).
+\item Awarded \textbf{KVPY Scholarship} (top-1 \% out of 10,000 applicants) and offered provisional admission to IISc with fellowship in 2016.
+\item Top-1 (out of 35,000 students) in the \textbf{National Chemistry Olympiad 2016} and qualified for the \textbf{Indian National Chemistry Olympiad 2016} .
+\item  Top-1\% (out of 35,000 students)in the \textbf{National Physics Olympiad 2016} and qualified for the \textbf{Indian National Physics Olympiad 2016}.
+\item Selected for national round of \textbf{Indian National Mathematics Olympiad 2015} out of 35,000 students.
+\end{itemize}
+
+\section{Relevant Coursework}
+\cvlistitem {Reinforcement learning*}
+\cvlistitem {Non-convex Optimization**}
+\cvlistitem {Deep learning*}
+\cvlistitem {GPU Programming**}
+\cvlistitem {Digital Signal Processing}
+\cvlistitem {Probability theory}
+\cvlistitem {Numerical Methods and Applied Programming}
+\vspace{0.70em}
+{$^*$} - Indicates Courses in present semester. {$^**$} - Indicates Courses in audit.
+
+\section{Internships and Work Experience}
+\subsection{Industrial Internships}
+\cventry{Summer 2018}{Deep Learning Engineer}{\textbf{Hyperverge Inc. } }{Bangalore}{}{}{}
+\cvlistitem {Worked on building an end-to-end pipeline for training small scale object detectors on over 13 architectures for the specific case of satellite imagery}
+\cvlistitem{ Achieved a \textbf{mAP of 67.4} with a hybrid architecture involving atrous convolutions, and \textbf{nasnet} feature-extractors. Used a version controlled system to record deep learning experiments.}
+\cvlistitem {Designed a bootstrapping system utilising fast-inference based on \textbf{tensorrt}. Pipeline was designed to work on parallel \textbf{ETL(Extract Transform Load)} for training, interleaved synchronous evaluation and on the run visualisations. }
+\cvlistitem {Designed a visualisation metrics and system for large satellite data (~ Tb) on \textbf{mercaptor} based tools such as Google maps while using libraries such as \textbf{rtree, fastKML} in order to facilitate scalable human-annotation. }
+\vspace{1.0em}
+\subsection{Research and Projects}
+\cventry{Fall 2018}{Optimising Neural Machine Translation on FPGA's}{Prof \href{http://www.cse.iitm.ac.in/~pratyush/}{Pratyush Kumar}}{IIT Madras}{}{}{}%
+\cvlistitem{Working on on-device optimisation of \textbf{NMT} on \textbf{FPGA's} by performing correlated experiments on quantisation, pruning, surrogate functions and fused custom operators. Aim to reduce large overhead and compute cost of NMT models in their softmax and conversion layers.}
+\cvlistitem{Presently working on \textbf{OpenNMT and Google NMT} based architectures as models under consideration.}
+
+\vspace{0.5em}
+
+\cventry{Spring 2018}{CNN Monocular SLAM}{Computer Vision and Intelligence Group}{IIT Madras}{{\href{https://github.com/iitmcvg/CNN_SLAM.git}{GitHub}}}{}%
+\cvlistitem{Working on fusing benefits of \textbf{Large Scale Direct SLAM} with monocular depth estimation and fast image segmentation. Improved pipeline to incorporate any deep net based \textbf{detection, segmentation or heat map outputs}.}
+\cvlistitem{Investigated usage of unsupervised monocular depth estimation with a wide number of techniques including : \textbf{stereo inspired left-right consistency, semi-supervised learning, 3-D depth reconstruction with ego-motion} (as a surrogate loss).}
+
+\vspace{0.5em}
+
+\cventry{June 2018 - Aug 2018}{Shared Compute Setup}{Computer Vision and Intelligence Group}{ IIT Madras}{\href{https://github.com/iitmcvg/workstation.git}{GitHub}}{}%
+\cvlistitem{Set up a shared cluster for 30 users in IIT Madras to access over 4 nodes with independent container environments.}
+\cvlistitem{Utilised best practices in \textbf{Dockerfiles} to obtain low memory demands, secure (SSH-key encrypted) and reliable access to training stacks throughout IIT Madras. Required understanding of operation of institute networking, safe access practices, server cooling requirements and dataloss mitigation strategies.}
+\vspace{0.5em}
+
+\vspace{0.5em}
+
+\cventry{June 2018 - Aug 2018}{AI for India: Social Initiative}{Prof \href{http://www.cse.iitm.ac.in/~pratyush/}{Pratyush Kumar} and Prof \href{https://www.cse.iitm.ac.in/~miteshk/}{Mitesh Khapra}}{IIT Madras}{\href{https://github.com/ai4india}{GitHub}}{}%
+
+\cvlistitem{Working closely with a team of 6 and professors \href{http://www.cse.iitm.ac.in/~pratyush/}{Pratyush Kumar} and \href{https://www.cse.iitm.ac.in/~miteshk/}{Mitesh Khapra} in the department of Computer Science, with an objective of building social impact solutions to largely out-of-focus problems.}
+\cvlistitem{Aim to democratise benefits of \textbf{Artificial Intelligence and Computer Vision} to a broader, unknown rural audience}
+
+\vspace{0.5em}
+
+\cventry{Aug 2017 - May 2018}{Automatic Waste Segregator}{Computer Vision and Intelligence Group}{CFI}{ IIT Madras}{}%
+\cvlistitem{Designed the deep learning backend and fabricated electronics for creating a low-cost, fast response segregator at source. Used an ensemble of visual and electrical features to accurately classify over 4,000 distinct objects into a given set of classes.}
+\cvlistitem{Compiled a resource optimised version of tensorflow to deploy on low-power \textbf{Single Board Computers} such as a Raspberry Pi and Odroid.}
+\cvlistitem{Demonstrated at \textbf{CFI Open House}. Patent filled, approval pending.}
+\cvlistitem{Won the campus round of the \textbf{9\textsuperscript{th} HULT Prize} a \$ 1 million  challenge to solve the world's most pressing issues by using energy to transform the lives of 10 million+ people, dubbed as the "Nobel Prize for Students". \textbf{Shortlisted for the regional round at \textbf{NTU, Singapore}.}}
+\cvlistitem{Awarded \textbf{Best Research Proposal Presentation} at \textbf{Shaastra 2018}. Shortlisted for \textbf{Design Impact Awards}, \textbf{Digital Ocean Campus Programme}, and \textbf{Pragyan, IISc.}}
+
+\vspace{0.5em}
+
+% Fiducial Localisation
+\cventry{Oct 2017 - Jan 2018}{Fiducial Localisation}{Computer Vision and Intelligence Group}{ IIT Madras}{\href{https://gitlab.com/tlokeshkumar/InterIITFiducial.git}{GitLab}}{}%
+\cvlistitem{Worked on autonomous and unsupervised detection of fiducials implanted for brain surgery. Utilised \textbf{mayavi} and \textbf{VTK} to perform 3-D visualisation of skull images, followed by \textbf{PCL} methods for KD-Tree objects, 3-D template matching, and local clustering.}
+\cvlistitem{Documented Deep Learning methods to fiducial isolation based on rendered data augmentation, with 3-D covnets ande slices for 2-D covnets.}
+\cvlistitem{Taken up as a part of the \textbf{BARC} problem statement, \textbf{6\textsuperscript{th} Inter IIT Tech Meet} .}
+
+\vspace{0.5em}
+
+% Hand Gesture Project
+\cventry{Nov 2017 - Jan 2018}{Hand-Gesture Recogniton}{Computer Vision and Intelligence Group}{ IIT Madras}{\href{https://gitlab.com/cvi_group/deep-gesture}{GitLab}}{}%
+\cvlistitem{Developed an ensembled neural network to accurately classify 20 hand gestures. Used architectures based on \textit{Incpetion-V4} and \textit{Resnet-50} as a part of the structure. Accuracy bench-marked on \textit{Marcel} database. Later extended to incorporate IMU sensor based inputs.}
+\cvlistitem{Adjudged winners for \textbf{T-Hub's Hack2innovate}, presented by \textbf{NVIDIA} and \textbf{Samsung}. Invited to \textbf{Global Entrepreneurship Summit, 2017- Hyderabad.}}
+
+\vspace{0.5em}
+
+\section{Positions of Responsibility}
+\cventry{Mar 2018 - Present}{Head, Computer Vision and Intelligence Group}{}{ IIT Madras}{\href{https://gitlab.com/iitmcvg}{Github}}{}%
+\vspace{-0.3em}
+\cvlistitem{Leading an undergrad community of 40 students who work enthusiastically towards building a impactfull organisation.}
+\cvlistitem{Have conducted open sessions for an audience of 200+ strong multiple times in IIT Madras and a few outside. Frequently interact with startups (Hyperverge Inc, Detect Technologies, Verihelp,etc), companies (Amazon, Google), NGOs and professors in our activities and projects.}
+
+%\cvlistitem{Worked on standardisation systems for shared compute, documentation builds. Documentation engine built to be integrated directly with existing git workflow, found  \href{https://github.com/iitmcvg/documentation}{here}} 
+%\cvlistitem{Frequently interact with startups (Hyperverge Inc, Detect Technologies, Verihelp,etc), companies (Amazon, Google), NGOs and professors in our activities and projects.}
+
+%\multitable{Coordinator Centre For Innovation, 2017-18}{
+%\Point{Part of \textbf{Computer Vision and Intelligence Group}, CFI, a community of students actively working on projects in Computer Vision and Deep Learning.}
+%\Point{Responsible for club's activities including conducting peer-to-peer sessions, hackathons and projects.}}
+%\vspace{1.2em}
+
+%\multitable{Events Coordinator, Shaastra 2018}{
+%\Point{Responsible for conducting events under Shaastra, an \textbf{ISO 9001:2008} audited technical fest.}
+%\Point{Conducted a workshop on IoT devices and actively managed three other events, including \textbf{Amazon AWS Hackathon}, Deep Learning Summit and \textbf{IBM Watson Workshop}.}}
+%\vspace{0.5em}
+
+%\colorsection{Extra-Curricular Activities}
+%\Point{Invited to conduct workshop titled \textbf{"Computer Vision through the Ages"} as a part of \href{https://pysangamam.org}{PySangamam 2018}.}
+%\Point{Managerial Team, \textbf{E-Cell}: Conducted Bootcamp as a part of E-Summit 2017, a weeklong mentorship and pitching avenue for aspiring entrepreneurs.}
+%\Point{Represented \textbf{Cauvery Hostel} at Schroeter Tennis 2017}
+%\vspace{-0.3em}
+%\Point{Writer at \textbf{Immerse, IIT Madras}, the research blog of the institute. Drafted an article covering oncology based study methods with Prof \href{Narayanaswamy} (draft prepared).}
+%\vspace{-0.3em}
+
+\end{document}
+
+
+%% end of file `template.tex'.
